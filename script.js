@@ -15,7 +15,7 @@ $(document).ready(function(){
         if(scroolPosition <=0){
             header.css('box-shadow', 'none');
         } else {
-            header.css('box-shadow', '5px 1px 5px rgba(0, 0, 0.1)');
+            header.css('box-shadow', '5px 1px 5px rgba (0, 0, 0.1)');
         }
         sections.each(function(i){
             const section = $(this);
@@ -30,4 +30,27 @@ $(document).ready(function(){
     navItems.removeClass('active');
     $(navItems[activeSectionIndex]).addClass('active');
 });
+    // animação
+    ScrollReveal().reveal('#cta', {
+        origin: 'left',
+        duration: 2000,
+        distance: '20%'
+    })
+
+        ScrollReveal().reveal('.dish', {
+        origin: 'left',
+        duration: 2000,
+        distance: '20%'
+    })
+
+        ScrollReveal().reveal('#testimonial_dish', {
+        origin: 'left',
+        duration: 2000,
+        distance: '20%'
+    })
+        ScrollReveal().reveal('#feedbacks', {
+        origin: 'right',
+        duration: 2000,
+        distance: '20%'
+    })
 });
