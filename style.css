@@ -1,8 +1,9 @@
+/* Google Fontes: Importa a fonte Poppins do Google Fonts para ser usada no site. */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --color-primary-1: #FFF5E4;
-    --color-primary-2: #F2C349;
+    --color-primary-2: #F2C369;
     --color-primary-3: #FFD700;
     --color-primary-4: #B84226;
     --color-primary-5: #8B5E3C;
@@ -11,12 +12,12 @@
     --color-neutral-1: #1A1A1A;
 }
 
-/* RESET DO CSS PADRÃO*/
+/* Reset do CSS padrão do navegador */
 * {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -31,11 +32,13 @@ section {
     padding: 28px 8%;
 }
 
-/*header*/
+
+/*  Header */
 header {
     width: 100%;
     padding: 28px 8%;
-    position: sticky; /*define a barra de navegação como fixa no topo*/
+    position: sticky;
+    /* Define a barra de navegação como fixa no topo */
     top: 0;
     background-color: var(--color-primary-1);
     z-index: 3;
@@ -55,13 +58,13 @@ header {
 
 #nav_list {
     display: flex;
-    gap: 48px;
     list-style: none;
+    gap: 48px;
 }
 
 .nav-item a {
     text-decoration: none;
-    color: #1D1D1D;
+    color: #1d1d1dad;
     font-weight: 600;
 }
 
@@ -81,8 +84,8 @@ header {
     font-weight: 600;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    color: var(--color-primary-2);
     transition: background-color .3s ease;
+    color: var(--color-primary-2);
 }
 
 .btn-default:hover {
@@ -98,11 +101,13 @@ header {
     display: none;
 }
 
-@media screen and (max-width: 1170px){
-    #navbar ,
-    #nav_list .btn-default {
+@media screen and (max-width: 1170px) {
+
+    #nav_list,
+    #navbar .btn-default {
         display: none;
     }
+
     #mobile_btn {
         display: block;
         border: none;
@@ -110,28 +115,33 @@ header {
         font-size: 1.5rem;
         cursor: pointer;
     }
+
     #mobile_menu.active {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     #mobile_nav_list {
         display: flex;
         flex-direction: column;
         gap: 12px;
         margin: 12px 0px;
     }
+
     #mobile_nav_list .nav-item {
         list-style: none;
         text-align: center;
     }
 }
-/*home*/
+
+
+/*  Home */
 #home {
     display: flex;
+    min-height: calc(100vh - 91px);
     align-items: center;
     justify-content: space-between;
-    min-height: calc(100vh - 91px);
 }
 
 #cta {
@@ -142,12 +152,13 @@ header {
     margin-top: 5%;
 }
 
-#cta .tittle {
+#cta .title {
     font-size: 4rem;
     color: var(--color-neutral-1);
+    ;
 }
 
-#cta .tittle span {
+#cta .title span {
     color: var(--color-primary-4);
 }
 
@@ -162,12 +173,12 @@ header {
 
 #cta_buttons a {
     text-decoration: none;
-    color: #1A1A1A;
+    color: var(--color-neutral-1);
 }
 
 #cta_buttons .btn {
     text-decoration: none;
-    color: var(--color-primary-3);
+    color: var(--color-primary-2);
 }
 
 #cta_buttons .btn:hover {
@@ -179,14 +190,14 @@ header {
     display: flex;
     gap: 8px;
     align-items: center;
-    background-color: var(--color-neutral-0);
+    background-color: #ffffff;
     padding: 8px 14px;
     font-weight: 500;
     box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
 }
 
-#phone_button {
+#phone_button button {
     box-shadow: none;
 }
 
@@ -206,7 +217,8 @@ header {
     border-radius: 10px;
     text-decoration: none;
     color: var(--color-neutral-1);
-    box-shadow: 0px 0 px 12px 8px rgba(0, 0, 0, 0.1);
+    ;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow .3s ease;
 }
 
@@ -226,16 +238,19 @@ header {
     border-radius: 30px;
 }
 
-@media screen and (max-width: 1170px){
+
+@media screen and (max-width: 1170px) {
     #home {
         min-height: 100%;
         padding-top: 0px;
     }
-    #home,
+
     #banner,
-    #banner img {
+    #banner img,
+    #home {
         display: none;
     }
+
     #cta {
         width: 100%;
         text-align: center;
@@ -249,22 +264,23 @@ header {
     }
 }
 
-/*MENUU*/
+
+/* Section Menu */
+.section-title {
+    color: var(--color-primary-4);
+    font-size: 1.563rem;
+}
+
+.section-subtitle {
+    font-size: 2.1875rem;
+}
+
 #menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-}
-
-.section-tittle {
-    color: var(--color-primary-4);
-    font-size: 1.563rem;
-}
-
-.section-subtittle {
-    font-size: 1.563rem;
 }
 
 #dishes {
@@ -279,16 +295,20 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--color-primary-2);
-    width: 24%;
-    padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     gap: 18px;
-    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.2);
+    width: 25%;
+    padding: 20px;
+    background-color: var(--color-neutral-0);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
 }
 
+.dish-image {
+    width: 100%;
+    border-radius: 20px;
+}
 
 .dish-heart {
     position: absolute;
@@ -297,28 +317,23 @@ header {
     align-items: center;
     justify-content: center;
     font-size: 1.563rem;
-    color: var(--color-neutral-0);
+    color: var(--color-primary-1);
     width: 70px;
     height: 70px;
     right: -10px;
     top: -10px;
     border-radius: 0px 37.5px 0px 42.5px;
 }
-.dish-image {
-    width: 100%;
-    border-radius: 20px;
+
+.dish-description {
+    color: #434343;
+    text-align: center;
 }
-.dis-tittle {
+
+.dish-rate i {
     color: var(--color-primary-4);
 }
 
-.dish-description {
-    color: var(--color-neutral-1);
-    text-align: center;
-}
-.dish-rate {
-    color: var(--color-primary-4);
-}
 .dish-price {
     display: flex;
     align-items: center;
@@ -330,6 +345,7 @@ header {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .dish {
         width: calc(50% - 12px);
     }
@@ -339,14 +355,16 @@ header {
     .dish {
         width: 100%;
     }
-    #menu .section-subtittle {
+
+    #menu .section-subtitle {
         text-align: center;
     }
 }
 
-/*testimonials*/
+
+/* testimonials */
 #testimonials {
-    min-width: calc(100vh - 91px);
+    min-height: calc(100vh - 91px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -357,6 +375,10 @@ header {
     width: 500px;
     height: auto;
     border-radius: 30px;
+}
+
+#testimonials .section-subtitle {
+    font-size: 3rem;
 }
 
 #testimonials_content {
@@ -381,24 +403,36 @@ header {
     box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
 }
 
-.feedback_avatar {
+.feedback-avatar {
     width: 100px;
     height: 100px;
     border-radius: 100%;
     object-fit: cover;
 }
 
+.feedback-content p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback-content p span {
+    color: var(--color-primary-4);
+}
+
 @media screen and (max-width: 1170px) {
     #testimonials {
         flex-direction: column;
     }
-    #testimonials .section-subtittle {
+
+    #testimonials .section-subtitle {
         text-align: center;
         font-size: 2.5rem;
     }
+
     #testimonial_dish {
         display: none;
     }
+
     #testimonials_content {
         width: 70%;
         display: flex;
@@ -407,19 +441,21 @@ header {
     }
 }
 
-@media screen and (max-width: 600px){
-    #testimonials .section-subtittle {
+@media screen and (max-width: 600px) {
+    #testimonials .section-subtitle {
         font-size: 2rem;
     }
-    #testimonial_content {
+
+    #testimonials_content {
         width: 100%;
-        align-items: center;
     }
+
     .feedback {
         flex-direction: column;
     }
 }
-/* footer */
+
+/*  Footer */
 footer {
     background-color: var(--color-primary-2);
 }
@@ -437,6 +473,7 @@ footer img {
 
 #copyright {
     color: var(--color-neutral-1);
+    ;
     font-weight: 500;
 }
 
@@ -454,6 +491,7 @@ footer img {
         transform: translate(-50%);
     }
 }
+
 @media screen and (max-width: 1280px) {
     #banner {
         position: absolute;
